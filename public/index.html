@@ -5,30 +5,78 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="jquery.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
         <script src="script.js"></script>
         <style>
-            #shortentext{
-                font-size: 1.2rem;
-            }
-            #shorten{
+
+            #shorten_text{
                 display: block;
-                width: 60%;
+                width: 70%;
                 margin: auto;
             }
+
+            @media(max-width : 576px){
+                #image{
+                    height: 100px;
+                    width: 100px;
+                } 
+                #shortentext{
+                    font-size: 1rem;
+                }
+            }
+
+            @media (min-width: 576px) { 
+                #image{
+                    height: 150px;
+                    width: 150px;
+                } 
+                #shortentext{
+                    font-size: 1.1rem;
+                }
+            }
+
+            @media (min-width: 768px) {  
+                #image{
+                    height: 200px;
+                    width: 200px;
+                } 
+                #shortentext{
+                    font-size: 1.2rem;
+                }
+            }
+
+            @media (min-width: 992px) { 
+                #image{
+                    height: 250px;
+                    width: 250px;
+                } 
+                #shortentext{
+                    font-size: 1.3rem;
+                }
+             }
+
+            @media (min-width: 1200px) {  
+                #image{
+                    height: 300px;
+                    width: 300px;
+                } 
+                #shortentext{
+                    font-size: 1.4rem;
+                }
+            }
+
         </style>
     </head>
     <body>
         <form>
             <div class="form-group text-center">
                 <br><br>
-                <img src="photos/shortenurl.png" class="rounded">
+                <img height="300" width="300" src="photos/shortenurl.png" class="rounded" id="image">
                 <br><br>
-                <input type="text" class="form-control border border-secondary" id="shorten">
+                <input type="text" class="form-control border border-secondary" id="shorten_text">
                 <br>
-                <button type="button" class="btn btn-outline-secondary"><b id="shortentext">Shorten URL<b></button>
+                <button type="button" class="btn btn-outline-secondary" id="shorten_button"><b id="shortentext">Shorten URL<b></button>
             </div>
         </form>
     </body>
