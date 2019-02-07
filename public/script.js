@@ -8,7 +8,7 @@ $(function(){
             {url : shorten_text.val()}, // this will be send to /shorten
             function(data){ //  response of post request
                 console.log(data);
-                window.prompt("Copy to clipboard: Ctrl+C, Enter", 'localhost:3333/'+data.hash);
+                window.prompt("Copy to clipboard: Ctrl+C, Enter", 'https://g-z.herokuapp.com/'+data.hash);
             }
         )
     })

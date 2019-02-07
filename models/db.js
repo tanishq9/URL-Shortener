@@ -26,6 +26,7 @@ var urlSchema = new mongoose.Schema({
 });
 
 
+// (collection_name,schema_name)
 // Use pre('validate') instead of pre('save') to set the value for the required field. Mongoose validates documents before saving, therefore your save middleware won't be called if there are validation errors. Switching the middleware from save to validate will make your function set the number field before it is validated.
 // pre is a middleware passed control during the async functions
 urlSchema.pre('save',function(next){
@@ -49,6 +50,7 @@ urlSchema.pre('save',function(next){
 });
 
 // dont write it above the .pre() else URL will not contain that pre function
+// (collection_name,schema_name)
 var URL = mongoose.model('URL',urlSchema);
 
 exports = module.exports = {

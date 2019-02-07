@@ -41,7 +41,7 @@ promise.then(function(){
             console.log('counter inserted and its value : '+counter_id);
         })
     }).catch(function(err){
-        console.log(err);
+        console.log("Error");
     });
 })
 
