@@ -24,6 +24,12 @@
                 #shortentext{
                     font-size: 1rem;
                 }
+                #copy_message{
+                    font-size: 1rem;
+                }
+                #shortentextlink{
+                    font-size: 1rem;
+                }
             }
 
             @media (min-width: 576px) { 
@@ -32,6 +38,12 @@
                     width: 150px;
                 } 
                 #shortentext{
+                    font-size: 1.1rem;
+                }
+                #copy_message{
+                    font-size: 1rem;
+                }
+                #shortentextlink{
                     font-size: 1.1rem;
                 }
             }
@@ -44,6 +56,12 @@
                 #shortentext{
                     font-size: 1.2rem;
                 }
+                #copy_message{
+                    font-size: 1rem;
+                }
+                #shortentextlink{
+                    font-size: 1.2rem;
+                }
             }
 
             @media (min-width: 992px) { 
@@ -52,6 +70,12 @@
                     width: 250px;
                 } 
                 #shortentext{
+                    font-size: 1.3rem;
+                }
+                #copy_message{
+                    font-size: 1rem;
+                }
+                #shortentextlink{
                     font-size: 1.3rem;
                 }
              }
@@ -64,8 +88,13 @@
                 #shortentext{
                     font-size: 1.4rem;
                 }
+                #copy_message{
+                    font-size: 1rem;
+                }
+                #shortentextlink{
+                    font-size: 1.4rem;
+                }
             }
-
         </style>
     </head>
     <body>
@@ -76,7 +105,13 @@
                 <br><br>
                 <input type="text" class="form-control border border-secondary" id="shorten_text">
                 <br>
-                <button type="button" class="btn btn-outline-secondary" id="shorten_button"><b id="shortentext">Shorten URL<b></button>
+                <button type="button" class="btn btn-outline-secondary" id="shorten_button"><b id="shortentext">Shorten URL</b></button>
+                <br><br>
+                <div id="copy_div" style="display: none">
+                    <span id="copy_text" style="font-family: ' Arial'; font-weight:unset; font-size: 1rem;color: green;padding: 10px;"><textarea id="shortentextlink"></textarea></span>
+                    <button id="copy_button" type="button" class="btn btn-outline-success clipboard"  data-clipboard-target="#copy_text"><b id="shortentext">Copy</b></button><br>
+                    <span id="copy_message" style="font-family: 'Courier New'; font-weight:unset; color: navy;display: none;">Copied!</span>
+                </div>
             </div>
         </form>
     </body>
