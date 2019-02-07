@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
         <script src="jquery.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.3/clipboard.min.js"></script> 
         <script src="script.js"></script>
         <style>
 
@@ -108,7 +109,7 @@
                 <button type="button" class="btn btn-outline-secondary" id="shorten_button"><b id="shortentext">Shorten URL</b></button>
                 <br><br>
                 <div id="copy_div" style="display: none">
-                    <span id="copy_text" style="font-family: ' Arial'; font-weight:unset; font-size: 1rem;color: green;padding: 10px;"><textarea id="shortentextlink"></textarea></span>
+                    <span style="font-family: ' Arial'; font-weight:unset; font-size: 1rem;color: green;padding: 10px;" id="shortentextlink"></span>
                     <button id="copy_button" type="button" class="btn btn-outline-success clipboard"  data-clipboard-target="#copy_text"><b id="shortentext">Copy</b></button><br>
                     <span id="copy_message" style="font-family: 'Courier New'; font-weight:unset; color: navy;display: none;">Copied!</span>
                 </div>
