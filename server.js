@@ -18,7 +18,12 @@ app.use(cors()); // for cross orign requests !?
 
 // Connect to the database
 // mongoose.connect returns a promise
-promise = mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017');
+// 'mongodb://tanishqsaluja>:<tanishqsaluja9>@ds123625.mlab.com:23625/urls' 
+
+// mongoose requires MONGODB database just as Sequelize requires MySQL database
+promise = mongoose.connect('mongodb://tanishqsaluja:tanishqsaluja9@ds123625.mlab.com:23625/urls');
+//'mongodb://localhost:27017');
+
 promise.then(function(){
     // we'll initialize our counter with a starting value of 10,000 to set up the URL shortening process.
     console.log('Connected.');
@@ -35,6 +40,8 @@ promise.then(function(){
             } 
             console.log('counter inserted and its value : '+counter_id);
         })
+    }).catch(function(err){
+        console.log(err);
     });
 })
 
